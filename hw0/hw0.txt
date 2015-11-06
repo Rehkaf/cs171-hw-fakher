@@ -1,0 +1,49 @@
+
+Homework 0
+
+Q1:
+
+svg.selectAll(".bar")
+  .data(data)
+  .enter()
+  .append("rect")
+  .attr({
+    class : "bar",
+    width : function(d) {return d;},
+    height: "40",
+    y : function(d, i) {return i*50 + 10;},
+    x : "10"
+   });
+What does this snippet do?
+Ans: This makes four rectangles verticaly and every time it will change it position. 
+What is .bar? What is selected?
+Ans: .bar is a class name and it slects all the all .bar class.
+Given that data is an array with [150, 230, 180, 90], what values do d and i take while this program executes. Why?
+Ans: when  d = 150  then i = 0
+	d=230 then i=1    d= 180 then i=2  d=90 then i=3
+d takes the data values  whereas, i is an index number.
+What does append("rect") do?
+Ans:  It adds a  node in Dom which make a rectangle.
+
+
+Q2:var bars = svg.selectAll(".bar");
+
+var bars_enter = bars.data(data).enter();
+
+var rects = bars_enter.append("rect")
+  .attr({
+    class : "bar",
+    width : function(d) {return d;},
+    height: "40",
+    y : function(d, i) {return i*50 + 10;},
+    x : "10"
+   });
+What does this snippet do? How is it different than the previous one?
+Ans:  no difference between this and previous one.
+
+What do the variables bars, bars_enter and rects contain?
+Ans:
+
+bars:  it saves all the  class .bar which are selected.
+bars_enter    all the data we want to enter with its class.
+rects               in it we bind data with the recangle.
